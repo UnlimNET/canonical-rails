@@ -26,7 +26,7 @@ module CanonicalRails
 
     def canonical_href(host = canonical_host, port = canonical_port)
       port = port.present? && port.to_i != 80 ? ":#{port}" : ''
-      raw "#{canonical_protocol}#{host}#{port}#{path_without_html_extension}#{trailing_slash_if_needed}#{whitelisted_query_string}".downcase
+      raw "#{canonical_protocol}#{host}#{port}#{path_without_html_extension}#{whitelisted_query_string}".downcase
     end
 
     def canonical_tag(host = canonical_host, port = canonical_port)
